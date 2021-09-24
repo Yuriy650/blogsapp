@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+max-width: 100%
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 65%;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    max-width: 35%;
+  }
+}
