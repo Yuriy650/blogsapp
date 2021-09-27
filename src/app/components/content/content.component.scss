@@ -1,27 +1,29 @@
-$width: 300px;
-.container{
+$width: 10rem;
+.container {
   margin: 1rem;
-  &__body{
-    width: 400px;
+
+  &__body {
+    width: 12rem;
   }
-  @media (max-width: 1200px) {
+}
+  /*@media (max-width: 1200px) {
     &__body {
-      max-width: 320px;
+      max-width: 10rem;
     }
   }
   @media (max-width: 992px) {
     &__body {
-      max-width: 240px;
+      max-width: 8rem;
     }
   }
   @media (max-width: 767px) {
     &__body {
-      max-width: 160px;
+      max-width: 6rem;
     }
   }
   @media (max-width: 400px) {
     &__body {
-      max-width: 100px;
+      max-width: none;
     }
   }
   &__article-card{
@@ -89,3 +91,4 @@ $width: 300px;
   }
 
 }
+*/

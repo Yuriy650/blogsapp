@@ -13,7 +13,10 @@ const routes: Routes = [
   {path: 'tesla', component: TeslaComponent },
   {path: 'business', component: BusinessComponent},
   {path: 'tech', component: TechComponent},
-  {path: 'apple/:id', component: OpenArticleComponent}
+  {path: 'apple/:id', component: OpenArticleComponent},
+  {path: 'tesla/:id', component: OpenArticleComponent},
+  {path: 'tech/:id', component: OpenArticleComponent},
+  {path: 'business/:id', component: OpenArticleComponent}
 ];
 
 @NgModule({

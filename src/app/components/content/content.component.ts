@@ -3,7 +3,7 @@ import {from, Observable, of} from 'rxjs';
 import {Article} from "../../interfaces";
 import {FetchArticleService} from "../../services/fetch-article.service";
 import {MatCardModule} from '@angular/material/card';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router, RouterLink} from '@angular/router';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class ContentComponent implements OnInit {
   id: number;
   @Input() article: Article
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -25,10 +25,6 @@ export class ContentComponent implements OnInit {
   }
 
   goToRead() {
-    this.route.paramMap.subscribe((params: ParamMap) => {
-      // @ts-ignore
-      this.id = +params.get('id');
-      console.log(this.id);
-    });
+
   }
 }

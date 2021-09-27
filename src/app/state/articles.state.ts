@@ -6,10 +6,11 @@ import {
   AddBusinessArticle,
   AddTechArticle,
   AddTeslaArticle,
-  GetAppleArticles, GetBusinessArticles, GetOpenAppleArticle, GetTechArticles, GetTeslaArticles
+  GetAppleArticles, GetBusinessArticles, GetOpenArticle, GetTechArticles, GetTeslaArticles
 } from '../actions/article.action';
 import {FetchArticleService} from "../services/fetch-article.service";
 import {tap} from "rxjs/operators";
+import {of} from 'rxjs';
 
 export class ArticleStateModel {
   apple: Article[];
@@ -79,7 +80,7 @@ return this.fetchService.postAppleArticles(payload).pipe(
   const state = getState();
   setState({
     ...state,
-    apple: payload
+    apple: [...state.apple, payload]
 
   })
 }))
@@ -92,7 +93,7 @@ return this.fetchService.postAppleArticles(payload).pipe(
             const state = getState();
             patchState({
               ...state,
-              tesla: payload
+              tesla: [...state.tesla, payload]
             })
           }
         )
@@ -106,7 +107,7 @@ return this.fetchService.postAppleArticles(payload).pipe(
             const state = getState();
             patchState({
               ...state,
-              business: payload
+              business: [...state.business,payload]
             })
           }
         )
@@ -120,7 +121,7 @@ return this.fetchService.postAppleArticles(payload).pipe(
             const state = getState();
             patchState({
               ...state,
-              tech: payload
+              tech: [...state.tech, payload]
             })
           }
         )
@@ -172,14 +173,15 @@ return this.fetchService.postAppleArticles(payload).pipe(
       })
     )
   }
-  @Action(GetOpenAppleArticle)
-  getCurrentAppleArticles({getState, patchState}: StateContext<ArticleStateModel>, {id}: GetOpenAppleArticle){
-    return this.fetchService.getOpenAppleArticle(id).pipe(
+  @Action(GetOpenArticle)
+  getCurrentArticle({getState, patchState}: StateContext<ArticleStateModel>, {id}: GetOpenArticle){
+    return of(this.fetchService.getCurrentArticle(id)).pipe(
       tap(result=>{
+        console.log(result)
         const state = getState();
         patchState({
           ...state,
-          openApple: [result]
+          openApple: result
         })
       })
     )

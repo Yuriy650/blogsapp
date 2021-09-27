@@ -63,50 +63,43 @@ export class FormContentComponent implements OnInit {
     };
 
 
-
-    this.businessArticles$
-      .subscribe()
-
-
-
-
     switch(newArticle.topic) {
       case 'apple':
-        this.appleArticles$
+       /* this.appleArticles$
           .subscribe(response=>{
               this.appleArticles = response
             }
           )
         this.appleArticles = [...this.appleArticles]
-        this.appleArticles.unshift(newArticle)
-        this.store.dispatch(new AddAppleArticle(this.appleArticles));
+        this.appleArticles.unshift(newArticle)*/
+        this.store.dispatch(new AddAppleArticle(newArticle));
         break
       case 'tesla':
-        this.teslaArticles$
+       /* this.teslaArticles$
           .subscribe(response=>{
             this.teslaArticles = response
           })
         this.teslaArticles = [...this.teslaArticles];
-        this.teslaArticles.unshift(newArticle)
-        this.store.dispatch(new AddTeslaArticle(this.teslaArticles));
+        this.teslaArticles.unshift(newArticle)*/
+        this.store.dispatch(new AddTeslaArticle(newArticle));
         break
       case 'business':
-        this.businessArticles$
+        /*this.businessArticles$
           .subscribe(response=>{
             this.businessArticles = response
           })
         this.businessArticles = [...this.businessArticles]
-        this.businessArticles.unshift(newArticle)
-        this.store.dispatch(new AddBusinessArticle(this.businessArticles));
+        this.businessArticles.unshift(newArticle)*/
+        this.store.dispatch(new AddBusinessArticle(newArticle));
         break
       case 'tech':
-        this.techArticles$
+        /*this.techArticles$
           .subscribe(response=>{
             this.techArticles = response
           })
         this.techArticles = [...this.techArticles]
-        this.techArticles.unshift(newArticle)
-        this.store.dispatch(new AddTechArticle(this.techArticles));
+        this.techArticles.unshift(newArticle)*/
+        this.store.dispatch(new AddTechArticle(newArticle));
         break
       default:
         break
