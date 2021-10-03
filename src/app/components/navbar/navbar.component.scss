@@ -1,6 +1,6 @@
 .navbar-container{
   &__body{
-    padding: 0.5rem 3rem 0.5rem 0;
+    padding: 0.5rem 0.1rem 0.5rem 0;
 
   }
   &__link{
@@ -8,5 +8,8 @@
     color: #3f51b5;
     padding: 0;
     margin: 0
+  }
+  &__link:focus{
+    color: red
   }
 }

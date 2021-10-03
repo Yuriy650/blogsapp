@@ -16,9 +16,9 @@ export class TechComponent implements OnInit {
   constructor(private store: Store) { }
 
   ngOnInit(): void {
-    this.getTechArticles()
-  }
-getTechArticles(){
     this.store.dispatch(new GetTechArticles())
-}
+  }
+
+
+
 }

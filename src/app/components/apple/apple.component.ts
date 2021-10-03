@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Observable, of} from "rxjs";
-import {ArticlesState} from "../../state/articles.state";
-import {Select, Store} from "@ngxs/store";
-import {GetAppleArticles} from "../../actions/article.action";
+import {Component, OnInit} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {ArticlesState} from '../../state/articles.state';
+import {Select, Store} from '@ngxs/store';
+import {GetAppleArticles} from '../../actions/article.action';
 import {Article} from '../../interfaces';
 
 
@@ -13,14 +13,16 @@ import {Article} from '../../interfaces';
 })
 export class AppleComponent implements OnInit {
   @Select(ArticlesState.getAllAppleArticles) articles$: Observable<Article[]>;
-  constructor(private store: Store) { }
+  articles: Article[];
+
+  constructor(private store: Store) {
+  }
 
   ngOnInit(): void {
-   this.getApple()
+    this.getApple();
   }
-getApple(){
-  this.store.dispatch(new GetAppleArticles())
-}
 
-
+  getApple = () => {
+    this.store.dispatch(new GetAppleArticles());
+  };
 }

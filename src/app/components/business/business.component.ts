@@ -17,9 +17,6 @@ export class BusinessComponent implements OnInit {
   constructor(private store: Store) { }
 
   ngOnInit(): void {
-this.getArticles()
-  }
-getArticles(){
     this.store.dispatch(new GetBusinessArticles())
-}
+  }
 }

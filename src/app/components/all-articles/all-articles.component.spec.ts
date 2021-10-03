@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpenAppleComponent } from './open-apple.component';
+import { AllArticlesComponent } from './all-articles.component';
 
-describe('OpenAppleComponent', () => {
-  let component: OpenAppleComponent;
-  let fixture: ComponentFixture<OpenAppleComponent>;
+describe('AllArticlesComponent', () => {
+  let component: AllArticlesComponent;
+  let fixture: ComponentFixture<AllArticlesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OpenAppleComponent ]
+      declarations: [ AllArticlesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OpenAppleComponent);
+    fixture = TestBed.createComponent(AllArticlesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,9 +4,9 @@
   </div>
    <form [formGroup]="form" (ngSubmit)="submit()" class="form-container__content" *ngIf="submitToggle">
      <div fxLayout="column" fxLayoutAlign="center center" >
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="form-container__field">
         <mat-label>Topic</mat-label>
-        <mat-select formControlName="topic">
+        <mat-select formControlName="topic" >
           <mat-option value="apple">Apple</mat-option>
           <mat-option value="tesla">Tesla</mat-option>
           <mat-option value="tech">Tech</mat-option>
@@ -14,26 +14,26 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="form-container__field">
         <mat-label>Title</mat-label>
         <input matInput type="text"
                placeholder="Title"
                formControlName="title">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="form-container__field">
         <mat-label>Image</mat-label>
         <input matInput type="text"
                placeholder="Image"
                formControlName="url">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="form-container__field">
         <mat-label>Description</mat-label>
 
         <textarea matInput
                   formControlName="description"></textarea>
 
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="form-container__field">
         <mat-label>Content</mat-label>
         <textarea matInput
                   formControlName="content"></textarea>

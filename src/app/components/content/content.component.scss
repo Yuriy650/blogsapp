@@ -1,94 +1,55 @@
 $width: 10rem;
 .container {
-  margin: 1rem;
+  margin: 0.5rem;
 
+  &__card-content {
+  flex-wrap: wrap;
+  }
+&__btn-read{
+  position: absolute;
+  bottom: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  a{
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
   &__body {
-    width: 12rem;
+    width: 21rem;
   }
-}
-  /*@media (max-width: 1200px) {
-    &__body {
-      max-width: 10rem;
-    }
-  }
-  @media (max-width: 992px) {
-    &__body {
-      max-width: 8rem;
-    }
-  }
-  @media (max-width: 767px) {
-    &__body {
-      max-width: 6rem;
-    }
-  }
-  @media (max-width: 400px) {
-    &__body {
-      max-width: none;
-    }
-  }
-  &__article-card{
-    margin-bottom: 1rem;
-    margin-top: 1rem;
 
-  }
   @media (max-width: 1200px) {
     &__article-card {
-      width: 350px;
-
+      width: 20rem;
+    }
+    &__card-image {
+      width: 18rem;
     }
   }
   @media (max-width: 992px) {
-    &__article-card {
-      width: 300px;
+    &__artcle-card {
+      width: 19rem;
+    }
+    &__card-image {
+      width: 18rem;
     }
   }
   @media (max-width: 767px) {
     &__article-card {
-      width: 130px;
-
+      width: 18rem;
+    }
+    &__card-image {
+      width: 16rem;
     }
   }
   @media (max-width: 400px) {
     &__article-card {
-      width: 90px;
-
+      width: 18rem;
     }
-  }
-  &__card-img{
-    max-width: $width;
-    height: 300px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  @media (max-width: 1200px) {
-    &__card-img {
-      max-width: 250px;
-      height: 250px;
+    &__card-image {
+      width: 16rem;
     }
-  }
-  @media (max-width: 992px) {
-    &__card-img {
-      max-width: 200px;
-      height: 200px;
-    }
-  }
-  @media (max-width: 767px) {
-    &__body {
-      max-width: 120px;
-      height: 120px;
-    }
-  }
-  @media (max-width: 400px) {
-    &__body {
-      max-width: 80px;
-      max-height: 80px;
-    }
-  }
-  &__card-content{
-
   }
 
 }
-*/

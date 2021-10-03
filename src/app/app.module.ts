@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ContentComponent} from './components/content/content.component';
@@ -26,8 +25,8 @@ import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import {ArticlesState} from './state/articles.state';
 import { TechComponent } from './components/tech/tech.component';
-import { OpenAppleComponent } from './components/open-apple/open-apple.component';
 import { OpenArticleComponent } from './components/open-article/open-article.component';
+import { AllArticlesComponent } from './components/all-articles/all-articles.component';
 
 @NgModule({
   declarations: [
@@ -39,8 +38,8 @@ import { OpenArticleComponent } from './components/open-article/open-article.com
     BusinessComponent,
     FormContentComponent,
     TechComponent,
-    OpenAppleComponent,
-    OpenArticleComponent
+    OpenArticleComponent,
+    AllArticlesComponent
   ],
   imports: [
     BrowserModule,

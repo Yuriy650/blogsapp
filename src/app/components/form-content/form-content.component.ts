@@ -2,9 +2,17 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Article} from '../../interfaces';
 import {Select, Store} from '@ngxs/store';
-import {AddAppleArticle, AddBusinessArticle, AddTechArticle, AddTeslaArticle, GetAppleArticles} from '../../actions/article.action';
+import {
+  AddAppleArticle,
+  AddBusinessArticle,
+  AddInAllArticle,
+  AddTechArticle,
+  AddTeslaArticle,
+  GetAppleArticles
+} from '../../actions/article.action';
 import {ArticlesState} from '../../state/articles.state';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-form-content',
@@ -14,16 +22,15 @@ import {Observable} from 'rxjs';
 export class FormContentComponent implements OnInit {
   form: FormGroup;
   submitToggle = false;
-  appleArticles: Article[] = []
-  techArticles: Article[] = [];
-  businessArticles: Article[] = [];
-  teslaArticles: Article[] = [];
+
 @Select(ArticlesState.getAllAppleArticles) appleArticles$: Observable<Article[]>;
 @Select(ArticlesState.getAllTeslaArticles) teslaArticles$: Observable<Article[]>;
 @Select(ArticlesState.getAllTechArticles) techArticles$: Observable<Article[]>;
-@Select(ArticlesState.getAllBusinessArticles) businessArticles$: Observable<Article[]>
+@Select(ArticlesState.getAllBusinessArticles) businessArticles$: Observable<Article[]>;
 
-  constructor(private store: Store) {
+
+
+  constructor(private store: Store, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -62,50 +69,9 @@ export class FormContentComponent implements OnInit {
       content: this.form.value.content
     };
 
-
-    switch(newArticle.topic) {
-      case 'apple':
-       /* this.appleArticles$
-          .subscribe(response=>{
-              this.appleArticles = response
-            }
-          )
-        this.appleArticles = [...this.appleArticles]
-        this.appleArticles.unshift(newArticle)*/
-        this.store.dispatch(new AddAppleArticle(newArticle));
-        break
-      case 'tesla':
-       /* this.teslaArticles$
-          .subscribe(response=>{
-            this.teslaArticles = response
-          })
-        this.teslaArticles = [...this.teslaArticles];
-        this.teslaArticles.unshift(newArticle)*/
-        this.store.dispatch(new AddTeslaArticle(newArticle));
-        break
-      case 'business':
-        /*this.businessArticles$
-          .subscribe(response=>{
-            this.businessArticles = response
-          })
-        this.businessArticles = [...this.businessArticles]
-        this.businessArticles.unshift(newArticle)*/
-        this.store.dispatch(new AddBusinessArticle(newArticle));
-        break
-      case 'tech':
-        /*this.techArticles$
-          .subscribe(response=>{
-            this.techArticles = response
-          })
-        this.techArticles = [...this.techArticles]
-        this.techArticles.unshift(newArticle)*/
-        this.store.dispatch(new AddTechArticle(newArticle));
-        break
-      default:
-        break
-    }
+    this.store.dispatch(new AddInAllArticle(newArticle))
     this.form.reset();
     this.submitToggle = false;
-
+this.router.navigate(['/'])
   }
 }

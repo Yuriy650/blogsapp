@@ -1,11 +1,11 @@
 <div class="container">
   <div class="container__body">
-    <mat-card class="container__article-card" >
+    <mat-card style="height: 30rem" class="container__article-card" >
       <mat-card-header>
         <mat-card-title>{{article.title}}</mat-card-title>
         <mat-card-subtitle>{{article.topic}}</mat-card-subtitle>
       </mat-card-header>
-      <div fxLayout="column" fxLayoutAlign="space-between center" >
+      <div fxLayout="column" fxLayoutAlign="space-between center" style="padding-bottom: 1rem">
       <img mat-card-image class="container__card-img" src="{{article.url}}" alt="{{article.title}}">
       <mat-card-content class="container__card-content" >
         <p>
@@ -14,8 +14,7 @@
       </mat-card-content>
       </div>
       <mat-card-actions>
-        <button mat-button type="button" (click)="goToRead()"><a [routerLink]="[article.id]" >Read</a></button>
-
+        <button mat-button class="container__btn-read" type="button" (click)="goToRead()"><a [routerLink]="[article.id]" >Read</a></button>
       </mat-card-actions>
     </mat-card>
   </div>

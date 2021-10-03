@@ -3,7 +3,7 @@ import {Article} from '../models/article.model';
 export class AddAppleArticle {
   static readonly type = '[APPLE] Add';
 
-  constructor(public payload: Article) {
+  constructor(public payload: Article[]) {
 
   }
 }
@@ -27,6 +27,17 @@ export class AddTechArticle {
 
   }
 }
+
+export class AddInAllArticle{
+  static readonly type = '[IN-ALL-ARTICLES] ADD';
+  constructor(public payload: Article) {
+  }
+}
+
+export class GetAllArticles{
+  static readonly type = '[ALL-ARTICLES] Get'
+}
+
 export class GetAppleArticles {
   static readonly type = '[APPLE] Get';
 }

@@ -1,19 +1,19 @@
-<div class="navbar-container" style="position: fixed" >
+<div class="navbar-container" >
   <div class="navbar-container__body">
-  <button mat-icon-button style="margin-left: 1.5rem" color="primary" aria-label="Example icon button with a menu icon"
+  <button mat-icon-button style="margin-left: 0.5rem" color="primary" aria-label="Example icon button with a menu icon"
           (click)="toggleMenu=!toggleMenu">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-list *ngIf="toggleMenu" fxLayout="column" fxLayoutAlign="space-around start" >
 
     <mat-list-item>
-     <button mat-button color="primary" >
-        <a class="navbar-container__link" routerLinkActive="active" [routerLink]="['/apple']">Apple</a>
+     <button mat-button color="primary"   >
+        <a class="navbar-container__link" routerLinkActive="active" [routerLink]="['/apple']" [routerLinkActiveOptions]="{exact: true}">Apple</a>
      </button>
     </mat-list-item>
     <mat-list-item>
       <button mat-button color="primary">
-        <a class="navbar-container__link" routerLinkActive="active" [routerLink]="['/tesla']">Tesla</a>
+        <a class="navbar-container__link" routerLinkActive="active" [routerLink]="['/tesla']" [routerLinkActiveOptions]="{exact: true}">Tesla</a>
       </button>
     </mat-list-item>
     <mat-list-item>
