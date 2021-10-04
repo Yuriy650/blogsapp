@@ -1,7 +1,7 @@
 <div class="navbar-container" >
   <div class="navbar-container__body">
-  <button mat-icon-button style="margin-left: 0.5rem" color="primary" aria-label="Example icon button with a menu icon"
-          (click)="toggleMenu=!toggleMenu">
+  <button mat-icon-button style="margin-left: 0.5rem" color="primary" aria-label="Icon button with a menu icon"
+          (click)="toggleMenu=!toggleMenu" [routerLink]="['/']" >
     <mat-icon>menu</mat-icon>
   </button>
   <mat-list *ngIf="toggleMenu" fxLayout="column" fxLayoutAlign="space-around start" >
