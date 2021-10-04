@@ -16,7 +16,6 @@ export class ArticleStateModel {
   tech: Article[];
   business: Article[];
   openApple: Article[];
-
 }
 
 @Injectable()

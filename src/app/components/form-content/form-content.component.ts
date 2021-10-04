@@ -3,12 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Article} from '../../interfaces';
 import {Select, Store} from '@ngxs/store';
 import {
-  AddAppleArticle,
-  AddBusinessArticle,
-  AddInAllArticle,
-  AddTechArticle,
-  AddTeslaArticle,
-  GetAppleArticles
+   AddInAllArticle,
 } from '../../actions/article.action';
 import {ArticlesState} from '../../state/articles.state';
 import {Observable} from 'rxjs';
@@ -27,9 +22,6 @@ export class FormContentComponent implements OnInit {
 @Select(ArticlesState.getAllTeslaArticles) teslaArticles$: Observable<Article[]>;
 @Select(ArticlesState.getAllTechArticles) techArticles$: Observable<Article[]>;
 @Select(ArticlesState.getAllBusinessArticles) businessArticles$: Observable<Article[]>;
-
-
-
   constructor(private store: Store, private router: Router) {
   }
 

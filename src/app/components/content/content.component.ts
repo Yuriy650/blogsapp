@@ -16,15 +16,9 @@ export class ContentComponent implements OnInit {
   id: number;
   @Input() article: Article
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor() {
   }
 
   ngOnInit(): void {
-
-
-  }
-
-  goToRead() {
-
   }
 }

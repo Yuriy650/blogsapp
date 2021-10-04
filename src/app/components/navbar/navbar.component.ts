@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatListModule} from '@angular/material/list';
 import {GetAppleArticles} from '../../actions/article.action';
 import {Store} from '@ngxs/store';
 

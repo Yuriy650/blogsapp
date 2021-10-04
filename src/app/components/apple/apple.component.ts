@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {ArticlesState} from '../../state/articles.state';
 import {Select, Store} from '@ngxs/store';
 import {GetAppleArticles} from '../../actions/article.action';

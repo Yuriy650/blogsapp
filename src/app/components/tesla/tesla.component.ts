@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable, of} from "rxjs";
+import {Observable} from "rxjs";
 import {Article} from "../../interfaces";
 import {Select, Store} from '@ngxs/store';
 import {ArticlesState} from '../../state/articles.state';

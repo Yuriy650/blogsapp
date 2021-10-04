@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FetchArticleService} from "../../services/fetch-article.service";
 import {Observable, of} from "rxjs";
 import {Article} from "../../interfaces";
 import {Select, Store} from '@ngxs/store';
