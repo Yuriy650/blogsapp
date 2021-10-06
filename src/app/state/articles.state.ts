@@ -86,9 +86,11 @@ export class ArticlesState {
     return this.fetchService.postInAllArticles(payload).pipe(
       tap(() => {
         const state = getState();
+        const articles = [...state.articles];
+        articles.unshift(payload)
         setState({
           ...state,
-          articles: [...state.articles, payload].reverse()
+          articles: articles
         });
       })
     );
