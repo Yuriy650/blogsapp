@@ -1,4 +1,9 @@
 .tech-container{
   flex-wrap: wrap;
   margin: 1rem 0.5rem;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+.tech-container::-webkit-scrollbar {
+  display:none;
 }

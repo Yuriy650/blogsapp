@@ -1,6 +1,9 @@
 .all-articles-container{
-  overflow-y: auto;
+  overflow-y: scroll;
   max-height: 600px;
   flex-wrap: wrap;
   margin: 1rem 1rem 1rem 2rem;
+}
+.all-articles-container::-webkit-scrollbar {
+  display:none;
 }

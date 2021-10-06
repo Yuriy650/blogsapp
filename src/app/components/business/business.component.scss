@@ -1,4 +1,9 @@
 .business-container{
   flex-wrap: wrap;
   margin: 1rem 0.5rem;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+.business-container::-webkit-scrollbar {
+  display:none;
 }
